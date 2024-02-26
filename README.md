@@ -1,5 +1,5 @@
 # Blog de Viajes 💚
-> El curso de Git y Github de Platzi es lo que me hacía falta para triplicar mi salario y lanzarme a la industria del tejido de lana sintética con Machine Learning
+> El curso de Git y Github de Platzi lo que me hacía falta para triplicar mi salario.
 
 ## En este curso de git y github
 * Todos los comandos de Git
