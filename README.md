@@ -6,3 +6,5 @@
 * El flujo de trabajo en Github
 * Las buenas prácticas
 * Creado por Adam
+* Incluye ejemplos en windwos
+* Disponible pg13
