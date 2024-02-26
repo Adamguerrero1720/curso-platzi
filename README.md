@@ -7,3 +7,4 @@
 * Las buenas prácticas
 * Creado por Adam
 * Incluye ejemplos en windwos
+* Disponible pg13
