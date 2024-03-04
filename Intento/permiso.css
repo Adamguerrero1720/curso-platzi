@@ -1,0 +1,38 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 50em;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: sans-serif;
+}
+
+#Botones {
+    margin: 5em;
+    align-self: flex-start;
+    height: 2em;
+    width: 20%;
+    margin: 10px;
+    font-size: 40px; /* Aumenta el tamaño del texto */
+    padding: 80px 20px; /* Aumenta el espacio alrededor del texto */
+    font-family: sans-serif;
+}
+
+.contenido-encima-h1 {
+    display: none; /* Por defecto, oculto */
+    position: absolute;
+    z-index: 1;
+    top: 50px; /* Ajustar según la altura del h1 */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #fefefe;
+    padding: 20px;
+}
+
