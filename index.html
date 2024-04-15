@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1 .0">
+    <title>La primera 6to A</title>
+    <!-- CSS -->
+    <style>
+    *{
+    box-sizing: border-box;
+    }
+    /* Estilo del Cuerpo de la pagina */
+    body {
+    font-family: Arial;
+    margin: 0;
+    }
+    /* Header/logo y Titulo */
+    .header {
+    padding: 6Opx;
+    text-align: center;
+    background: #faeb60;
+    color: rgb(88, 68, 68);
+    }
+    /* Estilo de la barra de navegacion */
+    .navbar{
+    display: flex;
+    background-color: #333;
+    }
+    /* Estilo de navegacion de los enlaces */
+    .navbar a{
+    color: white;
+    padding: 14px 20px;
+    text-decoration: none;
+    text-align: center;
+    }
+    /* Cambiar el color cuando paso el mouse */
+    .navbar a:hover {
+    background-color: #ddd;
+    color: black;
+    }
+    /* Contenedor de columnas */
+    .row {
+    display: flex;
+    flex-wrap: wrap;
+    }
+    /* Barra lateral */
+    .side {
+    flex: 30%;
+    background-color: #f1f1f1;
+    padding: 20px;
+    }
+    /* Columna principal */
+    .main{
+    flex: 70%;
+    background-color: white;
+    padding: 20px;
+    }
+    /* Fake image, just for this example */
+    .imagenfalsa {
+    background-color: #aaa;
+    width: 100%;
+    padding: 20px;
+    }
+    /* Footer */
+    footer {
+    padding: 20px;
+    text-align: center;
+    background: #ddd;
+    }
+    /* Responsivo, si la pantalla es menor a 700px se vera con el navbar modificado */
+    @media screen and (max-width: 700px) {
+    .TOW,
+    .navbar {
+    flex-direction: column;
+    }
+    }
+</style>
+</head>
+<body>
+    <div style="background:rgb(0, 255, 179);padding:5px">
+        <h4 style="text-align:center">Bienvenidos a nuestra pagina web, estan en casa</h4>
+    </div>
+    <!--Header-->
+    <div class="header">
+        <h1>Soffia Polanco Tejada</h1>
+        <p>Curso muy <b>Inteligente</b>, <b>Creativo</b></p>
+    </div>
+    <!-- Barra de Navegacion-->
+    <div class="navbar">
+        <a href="#">Inicio</a>
+        <a href="#">Quienes Somos</a>
+        <a href="#">Contacto</a>
+    </div>
+    <!-- Gontenidos -->
+    <div class="row">
+        <div class="side">
+            <h2>Acerca de Nosotros</h2>
+            <div class="i¡magenfalsa" style="height:200px;"><img src="" alt=""></div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae impedit, aspernatur culpa
+            rerum veniam incidunt qui voluptatum quasi accusamus sequi dolorem et provident eaque
+            molestias explicabo illum! Non, iusto sint!</p>
+            <h3>Cosas Favoritas</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus rem ut voluptatum
+            deserunt hic dicta qui sunt exercitationem odio, culpa iste tempora obcaecati illum inventore
+            assumenda sapiente? Officia, officiis nam.</p>
+            <div class="imagenfalsa” style="height:60px;">Image</div><br>
+            <div class="imagenfalsa” style="height:60px;">Image</div><br>
+            <div class="imagenfalsa” style="height:60px;">Image</div>
+        </div>
+        <div class="main">
+            <h2>Titulo</h2>
+            <h5>Descripcion, 1 marzo 2024</h5>
+            <div class="imagenfalsa" style="height:200px;">Imagen</div>
+            <p>Algun texto...</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et accusamus amet delectus
+            assumenda ipsam, natus sed praesentium dolor molestiae voluptatem, illo dolorum laborum in
+            inventore eum nam sapiente impedit sit.</p>
+            <br>
+            <h2>Titulo</h2>
+            <h5>Descripcion, 1 marzo 2024</h5>
+            <div class="imagenfalsa” style="height:200px;">Imagen</div>
+            <p>Algun texto...</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et accusamus amet delectus
+            assumenda ipsam, natus sed praesentium dolor molestiae voluptatem, illo dolorum laborum in
+            inventore eum nam sapiente impedit sit.</p>
+        </div>
+    </div>
+    <!-- Footer-->
+    <div class="footer">
+        <h2>Todos los derechos reservados Angel</h2>
+    </div>
+    </body>
+</html>
