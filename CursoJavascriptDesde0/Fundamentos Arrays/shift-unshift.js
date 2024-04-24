@@ -26,5 +26,5 @@ function appMusica (playlist, newSong) {
 const initialPlaylist = ['24/7','Ferxxo', 'Por Amar a Ciegas']
 
 const updatedPlaylist = appMusica(initialPlaylist, 'Dakiti')
-console.log('Initial playlist:', initialPlaylist)
+console.log('New Song to add: ' + appMusica)
 console.log('Updated playlist', updatedPlaylist)
