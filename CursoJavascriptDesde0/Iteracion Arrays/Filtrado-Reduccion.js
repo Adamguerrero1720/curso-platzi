@@ -27,3 +27,14 @@ const wordFrequency = words.reduce((accumlutaor,currentValue)=> {
 },{})
 
 console.log(wordFrequency)
+
+
+//Excersie: Passing Grade Average
+
+const grades = [90,60,86,93,79,67,97,70,80,89,79,83,76,46,40,79,39,20,81]
+
+const passingGrades = grades.filter(grade => grade >=70)
+
+const averagePassingGrade = passingGrades.reduce((sum, grade) => sum + grade, 0) / passingGrades.length
+
+console.log('Promedio de notas:',averagePassingGrade)
