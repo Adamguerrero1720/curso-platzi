@@ -1,14 +1,14 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { UserComponent } from './user/user.component';
+import { CommentsComponent } from './comments/comments.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
-  template: `<h1>Hola Angular, como estas tu? {{city.toUpperCase()}}</h1>`,
+  imports: [RouterOutlet, UserComponent,CommentsComponent],
+  templateUrl: './app.component.html', 
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'firsttry-app';
-  city= "Santo Domingo";
 }
