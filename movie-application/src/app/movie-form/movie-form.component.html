@@ -1,23 +1,30 @@
-<div>
-    <h2>{{ movieId ? 'Edit Movie' : 'Add New Movie' }}</h2>
-    <form [formGroup]="movieForm" (ngSubmit)="onSubmit()">
-      <div>
-        <label for="title">Title</label>
-        <input id="title" formControlName="title" />
-      </div>
-      <div>
-        <label for="director">Director</label>
-        <input id="director" formControlName="director" />
-      </div>
-      <div>
-        <label for="releaseYear">Release Year</label>
-        <input id="releaseYear" type="number" formControlName="releaseYear" />
-      </div>
-      <div>
-        <label for="imageURL">url Imagen</label>
-        <input id="imageURL" formControlName="imageURL" />
-      </div>
-      <button type="submit">{{ movieId ? 'Update' : 'Add' }}</button>
-      <button type="button" routerLink="/">Cancel</button>
-    </form>
-  </div>
+<div *ngIf="showForm">
+  <h1>{{ isEditMode ? 'Edit' : '' }} Movie</h1>
+  <form (ngSubmit)="saveMovie()">
+    <label>
+      Title:
+      <input [(ngModel)]="movie.title" name="title" required>
+    </label>
+    <label>
+      Director:
+      <input [(ngModel)]="movie.director" name="director" required>
+    </label>
+    <label>
+      Description:
+      <input [(ngModel)]="movie.description" name="description" required>
+    </label>
+    <label>
+      Year:
+      <input [(ngModel)]="movie.year" name="year" type="number" required>
+    </label>
+    <label>
+      Image URL:
+      <input [(ngModel)]="movie.imageURL" name="imageURL" required>
+    </label>
+    <button type="submit">{{ isEditMode ? 'Save' : 'Add' }}</button>
+  </form>
+</div>
+<button type="button" class="add-button" (click)="showAddForm()">Agregar</button>
+
+
+

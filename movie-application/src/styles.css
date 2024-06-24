@@ -1,7 +1,211 @@
+/* movie-list.component.css */
 body {
-    background-color: #222;
-    color: #fff;
-    font-family: 'Roboto', sans-serif;
-  }
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+.movie-list {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.movie-list h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.add-movie {
+  display: block;
+  width: 120px;
+  margin: 0 auto 20px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.add-movie:hover {
+  background-color: #0056b3;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  text-align: center;
+}
+
+.movie-card {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.movie-card:hover {
+  transform: scale(1.02);
+}
+
+.movie-card img {
+  width: 100%;
+  border-radius: 10px 10px 0 0;
+  object-fit: cover;
+  height: 200px;
+  align-items: center;
+}
+
+.movie-card h2 {
+  margin: 0 0;
+  font-size: 1.5em;
+}
+
+.movie-card h3 {
+  margin: 0 0;
+  font-size: 1.2em;
+  color: #666;
+  align-items: ;
+}
+
+.movie-card p {
+  margin: 0 0;
+  font-size: 1em;
+  color: #333;
+}
+
+.actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.edit-button,
+.delete-button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.edit-button {
+  background-color: #28a745;
+  color: white;
+  text-decoration: none;
+}
+
+.edit-button:hover {
+  background-color: #218838;
+}
+
+.delete-button {
+  background-color: #dc3545;
+  color: white;
+}
+
+.delete-button:hover {
+  background-color: #c82333;
+}
+
+.edit-form {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 20px auto;
+}
+
+.edit-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.edit-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.edit-form label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.edit-form input,
+.edit-form textarea {
+  margin-bottom: 15px;
+  padding: 10px;
+  font-size: 1em;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.edit-form .update-button,
+.edit-form .cancel-button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.edit-form .update-button {
+  background-color: #28a745;
+  color: white;
+}
+
+.edit-form .update-button:hover {
+  background-color: #218838;
+}
+
+.edit-form .cancel-button {
+  background-color: #dc3545;
+  color: white;
+}
+
+.edit-form .cancel-button:hover {
+  background-color: #c82333;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+#w2 {
+  height: 24px;
+  width: 24px;
   
-  
+}
+
+.add-button {
+  width: 170px; /* Ancho del botón */
+  text-align: center; /* Alineación del texto al centro */
+  line-height: 40px; /* Asegura que el texto esté centrado verticalmente */
+  padding: 10px 20px; /* Ajusta el padding para hacer el botón más grande */
+  background-color: #007bff; /* Fondo azul */
+  color: white; /* Texto blanco */
+  border: none; /* Sin borde */
+  border-radius: 10px; /* Borde redondeado */
+  cursor: pointer; /* Cambiar cursor a puntero al pasar sobre el botón */
+  font-size: 1.2em; /* Tamaño de fuente */
+  display: block; /* Hace que el botón sea un bloque */
+  margin-top: 40px; 
+  margin-left: 100px;/* Centra el botón horizontalmente */
+}
+
+.add-button:hover {
+  background-color: #0056b3; /* Cambio de color de fondo al pasar el ratón */
+}
+
+
+.add-button:hover {
+  background-color: #0056b3; /* Cambio de color de fondo al pasar el ratón */
+}

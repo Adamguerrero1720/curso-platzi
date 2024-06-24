@@ -1,0 +1,19 @@
+<form (ngSubmit)="addMovie()">
+  <div class="form-group">
+    <label for="title">Title</label>
+    <input type="text" class="form-control" id="title" required [(ngModel)]="movie.title" name="title">
+  </div>
+  <div class="form-group">
+    <label for="director">Director</label>
+    <input type="text" class="form-control" id="director" required [(ngModel)]="movie.director" name="director">
+  </div>
+  <div class="form-group">
+    <label for="releaseYear">Release Year</label>
+    <input type="number" class="form-control" id="releaseYear" required [(ngModel)]="movie.releaseYear" name="releaseYear">
+  </div>
+  <div class="form-group">
+    <label for="imageUrl">Image URL</label>
+    <input type="text" class="form-control" id="imageUrl" required [(ngModel)]="movie.imageUrl" name="imageUrl">
+  </div>
+  <button type="submit" class="btn btn-primary">Add Movie</button>
+</form>

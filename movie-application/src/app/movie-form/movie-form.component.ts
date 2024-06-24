@@ -1,50 +1,44 @@
 import { Component, OnInit } from '@angular/core';
-import { Movie, MovieService } from '../movie.service';
 import { ActivatedRoute, Router } from '@angular/router';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Movie, MovieService } from '../movie.service';
 
 @Component({
   selector: 'app-movie-form',
-  templateUrl: './movie-form.component.html',
-  styleUrls: ['./movie-form.component.css']
+  templateUrl: './movie-form.component.html'
 })
 export class MovieFormComponent implements OnInit {
-  movieForm: FormGroup;
-  movieId?: number;
+  movie: Movie = { id: 0, title: '', director: '', description: '', year: 0, imageURL: '' };
+  isEditMode = false;
+  showForm = false; // Control de visibilidad del formulario
 
   constructor(
-    private fb: FormBuilder,
     private movieService: MovieService,
-    private router: Router,
-    private route: ActivatedRoute
-  ) {
-    this.movieForm = this.fb.group({
-      title: ['', Validators.required],
-      director: ['', Validators.required],
-      releaseYear: ['', [Validators.required, Validators.min(1888)]]
-    });
-  }
+    private route: ActivatedRoute,
+    private router: Router
+  ) {}
 
   ngOnInit(): void {
-    this.movieId = this.route.snapshot.params['id'];
-    if (this.movieId) {
-      const movie = this.movieService.getMovie(this.movieId);
+    const id = this.route.snapshot.paramMap.get('id');
+    if (id) {
+      this.isEditMode = true;
+      const movie = this.movieService.getMovie(Number(id));
       if (movie) {
-        this.movieForm.patchValue(movie);
+        this.movie = movie;
       }
     }
   }
 
-  onSubmit(): void {
-    if (this.movieForm.valid) {
-      const movie: Movie = this.movieForm.value;
-      if (this.movieId) {
-        movie.id = this.movieId;
-        this.movieService.updateMovie(movie);
-      } else {
-        this.movieService.addMovie(movie);
-      }
-      this.router.navigate(['/']);
+  saveMovie(): void {
+    if (this.isEditMode) {
+      this.movieService.updateMovie(this.movie);
+    } else {
+      this.movieService.addMovie(this.movie);
     }
+    this.showForm = false; // Ocultar el formulario después de guardar
+    window.location.reload(); // Recargar la página para reflejar los cambios
+  }
+
+  showAddForm(): void {
+    this.showForm = true; // Mostrar el formulario al hacer clic en "Agregar"
   }
 }

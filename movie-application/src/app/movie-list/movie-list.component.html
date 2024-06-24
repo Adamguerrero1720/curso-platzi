@@ -1,14 +1,41 @@
+<!-- movie-list.component.html -->
 <div class="movie-list">
-  <h2>Movies</h2>
-  <a routerLink="/add">Add Movie</a>
   <ul>
     <li *ngFor="let movie of movies" class="movie-card">
-      {{ movie.title }} ({{ movie.year }}) - {{ movie.director }}
-      <img [src]="movie.imageURL" alt="Movie Poster">
-      <h3>{{ movie.title }}</h3>
+      <img [src]="movie.imageURL" alt="{{ movie.title }}">
+      <h2>{{ movie.title }}</h2>
+      <h3>{{ movie.year }}</h3>
+      <h3>{{ movie.director }}</h3> 
       <p>{{ movie.description }}</p>
-      <a [routerLink]="['/edit', movie.id]">Edit</a>
-      <button (click)="deleteMovie(movie.id)">Delete</button>
+      <div class="actions">
+        <button type="button" class="edit-button" (click)="editMovie(movie)">
+          <img src="https://cdn.icon-icons.com/icons2/1875/PNG/512/editpencil_120034.png" alt="Edit" id="w2">
+        </button>
+        <button (click)="deleteMovie(movie.id)" class="delete-button">Delete</button>
+      </div>
     </li>
   </ul>
+
+  <div *ngIf="editingMovie" class="edit-form">
+    <h2>Edit Movie</h2>
+    <form (ngSubmit)="onSubmit()">
+      <label for="title">Title</label>
+      <input id="title" [(ngModel)]="editingMovie.title" name="title" required>
+      
+      <label for="director">Director</label>
+      <input id="director" [(ngModel)]="editingMovie.director" name="director" required>
+
+      <label for="year">Year</label>
+      <input id="year" [(ngModel)]="editingMovie.year" name="year" required>
+
+      <label for="imageURL">Image URL</label>
+      <input id="imageURL" [(ngModel)]="editingMovie.imageURL" name="imageURL" required>
+
+      <label for="description">Description</label>
+      <textarea id="description" [(ngModel)]="editingMovie.description" name="description" required></textarea>
+      
+      <button type="submit" class="update-button">Update</button>
+      <button type="button" (click)="cancelEdit()" class="cancel-button">Cancel</button>
+    </form>
+  </div>
 </div>

@@ -1,0 +1,7 @@
+<!-- movie-detail.component.html -->
+<h1>{{ movie?.title }}</h1>
+<p>Director: {{ movie?.director }}</p>
+<p>Description: {{ movie?.description }}</p>
+<p>Year: {{ movie?.year }}</p>
+<img [src]="movie?.imageURL" alt="{{ movie?.title }}">
+<a [routerLink]="['/movie/:id']">Back to list</a>

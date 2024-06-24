@@ -28,7 +28,7 @@ export class MovieService {
 
   addMovie(movie: Movie): void {
     const movies = this.getMovies();
-    movie.id = new Date().getTime(); // Simple ID generation
+    movie.id = new Date().getTime();
     movies.push(movie);
     localStorage.setItem(this.storageKey, JSON.stringify(movies));
   }
