@@ -1,0 +1,23 @@
+<div>
+    <h2>{{ movieId ? 'Edit Movie' : 'Add New Movie' }}</h2>
+    <form [formGroup]="movieForm" (ngSubmit)="onSubmit()">
+      <div>
+        <label for="title">Title</label>
+        <input id="title" formControlName="title" />
+      </div>
+      <div>
+        <label for="director">Director</label>
+        <input id="director" formControlName="director" />
+      </div>
+      <div>
+        <label for="releaseYear">Release Year</label>
+        <input id="releaseYear" type="number" formControlName="releaseYear" />
+      </div>
+      <div>
+        <label for="imageURL">url Imagen</label>
+        <input id="imageURL" formControlName="imageURL" />
+      </div>
+      <button type="submit">{{ movieId ? 'Update' : 'Add' }}</button>
+      <button type="button" routerLink="/">Cancel</button>
+    </form>
+  </div>

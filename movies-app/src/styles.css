@@ -1,0 +1,10 @@
+/* You can add global styles to this file, and also import other style files */
+:root{
+    font-family: sans-serif;
+    --small-text: 12px;
+    --medium-text: 16px;
+    --large-text: 20px;
+    --primary-color: ;
+    --secondary-color: ;
+    --tertiary-color: ;
+}

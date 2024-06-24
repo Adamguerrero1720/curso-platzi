@@ -1,0 +1,14 @@
+<div class="movie-list">
+  <h2>Movies</h2>
+  <a routerLink="/add">Add Movie</a>
+  <ul>
+    <li *ngFor="let movie of movies" class="movie-card">
+      {{ movie.title }} ({{ movie.year }}) - {{ movie.director }}
+      <img [src]="movie.imageURL" alt="Movie Poster">
+      <h3>{{ movie.title }}</h3>
+      <p>{{ movie.description }}</p>
+      <a [routerLink]="['/edit', movie.id]">Edit</a>
+      <button (click)="deleteMovie(movie.id)">Delete</button>
+    </li>
+  </ul>
+</div>
