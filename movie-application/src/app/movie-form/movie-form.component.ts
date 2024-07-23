@@ -9,7 +9,7 @@ import { Movie, MovieService } from '../movie.service';
 export class MovieFormComponent implements OnInit {
   movie: Movie = { id: 0, title: '', director: '', description: '', year: 0, imageURL: '' };
   isEditMode = false;
-  showForm = false; // Control de visibilidad del formulario
+  showForm = false; 
 
   constructor(
     private movieService: MovieService,
@@ -34,11 +34,11 @@ export class MovieFormComponent implements OnInit {
     } else {
       this.movieService.addMovie(this.movie);
     }
-    this.showForm = false; // Ocultar el formulario después de guardar
-    window.location.reload(); // Recargar la página para reflejar los cambios
+    this.showForm = false; 
+    window.location.reload(); 
   }
 
   showAddForm(): void {
-    this.showForm = true; // Mostrar el formulario al hacer clic en "Agregar"
+    this.showForm = true;
   }
 }
