@@ -1,0 +1,19 @@
+Los lenguajes de programacion son sincronos, es decir, ejecutan tarea por tarea por tarea.
+Javascript es single-threaded, solo puede ejecutar tareas en un solo hilo, llamado hilo principal.
+
+
+Bloqueante: para el proceso y hasta que no sea completado no se puede seguir ejecutando. Ejemplo: Alert en js, hasta que no se le da ok no se puede seguir con la aplicacion
+No bloqueante: Una tarea se devuelve inmediatamente con independencia del resultado, si se completa devuelve los datos y si no un error.
+
+Sincronismo: LAs tareas se ejecutan de forma secuencial, se debe esperar a que se complete para continuar con la siguiente tarea.
+Asincronismo: Las tareas pueden ser realizadas mas tardes, lo que hace que una respuesta sea procesada en diferida.
+
+Callback: una funcion que se pasa como argumento de otra funcion y que sera invocada.
+
+Promesas: funciones no bloqueantes y asincronia la cual puede retornar un valor ahora, en el futuro o nunca.
+
+Async/await: permite estructurar una funcion asincrona sin bloqueo de una manera similar a una funcion sincrona y ordinaria.
+
+Js no es multi-hilo de naturaleza, hay herramientas que nos dan esa flexibilidad.
+
+Javascript es asincrono y no bloqueante, con un bucle de eventos (concurrencia) implementado con un unico hilo para sus interfaces de I/O
